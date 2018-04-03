@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- layout for a edit and show text -->
+    <LinearLayout
+        android:id="@+id/edit_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#343737" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X" />
+
+        <!-- end of the edit text layout -->
+    </LinearLayout>
+
+
+    <!-- layout for whole numeric keypad -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/WholeKeyPad"
+        android:layout_weight="7"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp">
+
+
+
+        <!-- vertical layout 1 for the sin cos buttons -->
+        <LinearLayout
+
+            android:id="@+id/scientific_calculation_area1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#343737"
+            android:layout_weight="5">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Sin"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Cos"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Tan"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="π"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="!"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+        <!-- vertical layout 2 for the log ln buttons -->
+        <LinearLayout
+            android:id="@+id/scientific_calculation_area2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#343737"
+            android:layout_weight="5"
+            android:layout_marginRight="15dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Ln"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Log"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="e"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="^"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="√"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+        <!-- numeric keyboard layout started -->
+        <LinearLayout
+            android:id="@+id/numeric_keyboard_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#343737"
+            android:layout_weight="21">
+
+            <!-- starting new layouts for arranging numbers -->
+            <LinearLayout
+                android:id="@+id/first_number_row"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#adafaf"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="7"
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="8"
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="9"
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="/"
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="("
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/second_number_row"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#adafaf"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="4"
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="5"
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="6"
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="*"
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text=")"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contains_zero_equal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#adafaf"
+                android:layout_weight="2">
+
+                <LinearLayout
+                    android:id="@+id/separat_of_equal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#adafaf"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/third_number_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="#adafaf"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="1"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="2"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="3"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="-"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/fourth_number_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="#adafaf"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="0"
+                            android:layout_weight="2"/>
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="."
+                            android:layout_weight="1"/>
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="+"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="="
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <!-- numeric layout ended -->
+        </LinearLayout>
+
+
+
+
+
+      <!--end of the numeric keypad -->
+    </LinearLayout>
+    
+
+<!-- end of the main layout -->
+</LinearLayout>
